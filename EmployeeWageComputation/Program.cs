@@ -8,6 +8,7 @@ namespace EmployeeWageComputation
         {
             EmployeeWages employeeWages = new EmployeeWages();
             employeeWages.EmployeeAttendance();
+            employeeWages.CalculateEmpWages();
         }
     }
 }
