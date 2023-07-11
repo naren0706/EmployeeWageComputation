@@ -23,7 +23,6 @@ namespace EmployeeWageComputation
         {
             int dailyWages = WAGE_PER_HR * FULL_DAY_HR;
             Console.WriteLine(dailyWages);
-            Console.WriteLine("hweiwkdsdsdasdashdiuashdjhuj");
         }
     }
 }
