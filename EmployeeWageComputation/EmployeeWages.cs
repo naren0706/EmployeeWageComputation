@@ -8,7 +8,7 @@ namespace EmployeeWageComputation
 {
     class EmployeeWages
     {
-        const int WAGE_PER_HR = 0, FULL_DAY_HR = 0;
+        const int WAGE_PER_HR = 20, FULL_DAY_HR = 8, PART_TIME_HR=8;
         public void EmployeeAttendance()
         {
             Random random = new Random();
@@ -19,10 +19,16 @@ namespace EmployeeWageComputation
                 Console.WriteLine("Employee is present");
             
         }
-        public void CalculateEmpWages()
+        public void CalculateEmpFullTimeWages()
         {
             int dailyWages = WAGE_PER_HR * FULL_DAY_HR;
             Console.WriteLine(dailyWages);
         }
+        public void CalculateEmpPartTimeWages()
+        {
+            int dailyWages = WAGE_PER_HR * PART_TIME_HR;
+            Console.WriteLine(dailyWages);
+        }
+
     }
 }
