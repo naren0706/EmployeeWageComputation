@@ -25,10 +25,20 @@ namespace EmployeeWageComputation
 
             int empCheck = random.Next(0,3);
             int empHrs = 0;
-            if (empCheck == IS_FULL_TIME)
-                empHrs = FULL_TIME_HR;
-            else if (empCheck == IS_PART_TIME)
-                empHrs = PART_TIME_HR;
+            switch(empCheck)
+            {
+                case 0:
+                    empHrs = FULL_TIME_HR;
+                    break;
+                case 1:
+                    empHrs = PART_TIME_HR;
+                    break;
+                default:
+                    empHrs = 0;
+                    break;
+
+            }
+
             int dailyWages = WAGE_PER_HR * empHrs;
             Console.WriteLine(dailyWages);
         }
