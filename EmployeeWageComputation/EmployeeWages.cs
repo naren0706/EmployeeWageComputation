@@ -8,8 +8,21 @@ namespace EmployeeWageComputation
 {
     class EmployeeWages
     {
-        const int WAGE_PER_HR = 20, FULL_TIME_HR = 8, PART_TIME_HR = 4, IS_FULL_TIME = 1, IS_PART_TIME = 0 , TOTAL_WORKING_DAYS = 20, TOTAL_WORKING_HOURS = 100;
+        const int FULL_TIME_HR = 8, PART_TIME_HR = 4, IS_FULL_TIME = 1, IS_PART_TIME = 0 ;
+        int WAGE_PER_HR, TOTAL_WORKING_DAYS, TOTAL_WORKING_HOURS;
+        string companyName = "";
         Random random = new Random();
+
+        public EmployeeWages() {
+            Console.WriteLine("Enter company name");
+            this.companyName = Console.ReadLine();
+            Console.WriteLine("Wages per hour");
+            this.WAGE_PER_HR = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("NUmber of working days");
+            this.TOTAL_WORKING_DAYS = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Total working hours");
+            this.TOTAL_WORKING_HOURS = Convert.ToInt32(Console.ReadLine());
+        }
 
         public void EmployeeAttendance()
         {
@@ -43,7 +56,7 @@ namespace EmployeeWageComputation
             }
 
             int dailyWages = WAGE_PER_HR * empHrs;
-            Console.WriteLine(dailyWages);
+            Console.WriteLine("Daily wages of"+this.companyName+" is "+ dailyWages);
         }
         
 

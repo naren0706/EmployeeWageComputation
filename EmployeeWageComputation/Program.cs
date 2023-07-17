@@ -5,10 +5,14 @@ namespace EmployeeWageComputation
     class Program
     {
         public static void Main(string[] args)
-        {
-            EmployeeWages employeeWages = new EmployeeWages();
-            employeeWages.EmployeeAttendance();
-            employeeWages.CalculateEmpWages();
+        {            
+
+            EmployeeWages Apple = new EmployeeWages();
+            Apple.EmployeeAttendance();
+            Apple.CalculateEmpWages();
+            EmployeeWages Amazon = new EmployeeWages();
+            Amazon.EmployeeAttendance();
+            Amazon.CalculateEmpWages();
         }
     }
 }
