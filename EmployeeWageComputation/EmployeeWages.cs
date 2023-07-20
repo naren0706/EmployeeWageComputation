@@ -9,7 +9,7 @@ namespace EmployeeWageComputation
     class EmployeeWages
     {
         const int FULL_TIME_HR = 8, PART_TIME_HR = 4, IS_FULL_TIME = 1, IS_PART_TIME = 0 ;
-        int WAGE_PER_HR, TOTAL_WORKING_DAYS, TOTAL_WORKING_HOURS;
+        int WAGE_PER_HR, TOTAL_WORKING_DAYS, TOTAL_WORKING_HOURS,TOTAL_EMPLOYEE_WAGES;
         string companyName = "";
         Random random = new Random();
 
@@ -55,8 +55,14 @@ namespace EmployeeWageComputation
                 }
             }
 
-            int dailyWages = WAGE_PER_HR * empHrs;
-            Console.WriteLine("Daily wages of"+this.companyName+" is "+ dailyWages);
+            int TOTAL_EMPLOYEE_WAGES = WAGE_PER_HR * empHrs;
+            Console.WriteLine("Daily wages of"+this.companyName+" is "+ TOTAL_EMPLOYEE_WAGES);
+        }
+
+        public string toString()
+        {
+            return "Daily wages of" + this.companyName + " is " + TOTAL_EMPLOYEE_WAGES;
+            
         }
         
 
